@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href="/logout">Logout</a>
+	<hr style="width:100%;text-align:left;margin-left:0">
+	<form action="/addaccount">
+    <input type="submit" value="Add account" />
+	</form>
+	<br />
+	<form action="/savedaccounts">
+    <input type="submit" value="See saved accounts" />
+	</form>
+{% endblock %}

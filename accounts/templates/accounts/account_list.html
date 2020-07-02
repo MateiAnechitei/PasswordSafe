@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href="/logout">Logout</a>
+	<hr style="width:100%;text-align:left;margin-left:0">
+	<form action="/home/create">
+    <input type="submit" value="Add account" />
+	</form>
+	<hr style="width:100%;text-align:left;margin-left:0;border: 2px solid blue;border-radius: 1px;">
+{% for instance in account_list %}
+	<p> Site: {{instance.site}} <br/> <br/> Username: {{instance.username}} <br/> <br/> Password: {{instance.password}}</p>
+	<form action="/home/{{instance.id}}/update">
+    <input type="submit" value="Edit account" />
+	</form>
+	<form action="/home/{{instance.id}}/delete">
+    <input type="submit" value="Delete account" />
+	</form> 
+	<hr style="width:100%;text-align:left;margin-left:0;border: 2px solid blue;border-radius: 1px;">
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href="/logout">Logout</a>
+	<hr style="width:100%;text-align:left;margin-left:0">
+	<form method ='POST'> 
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type = 'submit' value = 'Save' />
+	</form>
+{% endblock %}

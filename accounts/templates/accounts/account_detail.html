@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href="/logout">Logout</a>
+	<hr style="width:100%;text-align:left;margin-left:0">
+	<p> Site: {{object.site}} <br/> <br/> Username: {{object.username}} <br/> <br/> Password: {{object.password}}</p>
+{% endblock content %}
